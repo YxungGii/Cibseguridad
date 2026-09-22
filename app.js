@@ -3,8 +3,8 @@
    Edita SUPABASE_URL y SUPABASE_ANON_KEY con los datos de tu proyecto.
    ===================================================================== */
 
-const SUPABASE_URL = "https://TU-PROYECTO.supabase.co";
-const SUPABASE_ANON_KEY = "TU_ANON_KEY";
+const SUPABASE_URL = "https://mnpkfheqjveowbbkqrui.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_rnsp8JEr5wTy3wauDd-UDA_njCMydIC";
 
 const LabApp = (function () {
 
