@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lab SQL Injection — Tienda Ficticia</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>🛒 Tienda Ficticia — Lab de práctica</h1>
+  <span class="badge">USO EDUCATIVO · DATOS FICTICIOS</span>
+</header>
+
+<main>
+
+  <!-- ========================================================= -->
+  <!-- LOGIN — usa login_vulnerable() o login_seguro() según modo -->
+  <!-- ========================================================= -->
+  <section class="card">
+    <h2>🔐 Login</h2>
+    <label>Usuario</label>
+    <input type="text" id="login-user" placeholder="ej. ana" />
+    <label>Contraseña</label>
+    <input type="text" id="login-pass" placeholder="ej. ana2024" />
+    <button onclick="LabApp.login()">Entrar</button>
+    <div id="login-result" class="result"></div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- BUSCADOR — usa buscar_producto_vulnerable() o la versión segura -->
+  <!-- ============================================================== -->
+  <section class="card">
+    <h2>🔍 Buscar producto</h2>
+    <label>Término</label>
+    <input type="text" id="search-term" placeholder="ej. mouse" />
+    <button onclick="LabApp.search()">Buscar</button>
+    <div id="search-result" class="result"></div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- ESTADO DEL MODO — se controla desde la consola del navegador -->
+  <!-- Ver app.js -> LabApp.setSafeMode(true/false)                 -->
+  <!-- ========================================================= -->
+  <section class="card">
+    <h2>⚙️ Modo actual</h2>
+    <p id="mode-status">Cargando...</p>
+    <p class="hint">
+      Cambia el modo desde la consola del navegador (F12):<br />
+      <code>LabApp.setSafeMode(true)</code> → usa las funciones parametrizadas (seguras)<br />
+      <code>LabApp.setSafeMode(false)</code> → usa las funciones vulnerables (por defecto)
+    </p>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
